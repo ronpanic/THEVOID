@@ -5,6 +5,7 @@
 .sidebar {
     
 }
+
 .content-container {
     flex: 1;
     display: flex;
@@ -32,3 +33,4 @@
     border-radius: 24px;
     width: 600px;
 }
+

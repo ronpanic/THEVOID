@@ -1,29 +1,28 @@
 .footer-line {
     height: 2px;
     background-color: rgba(0, 0, 0, 0.1); 
-    width: 100%; 
+    width: 300%; 
+    margin-left: -35rem;
     z-index: 1;
-    margin-top: -1rem;
 }
 
-.footer-line h5 {
+.footer h5 {
     text-align: center;
     font-weight: 100;
 }
 
-.footer-line h6 {
+.footer h6 {
     text-align: center;
     margin-top: -10px;
 }
 
-.footer-line h6 a {
+.footer h6 a {
     color: #000;
 }
 
-.footer-line h6 a:hover {
+.footer h6 a:hover {
     color: #777777;
 }
-
 
 .footer-img {
     text-align: center;

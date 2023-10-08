@@ -3,7 +3,9 @@ import "./Footer.css"
 
 const Footer = () => {
   return (
-    <div className="footer-line">
+
+    <div className='footer'>
+      <div className="footer-line"></div>
         <h5>Copyright THEVOID - 2023. Todos los derechos reservados. Defensa de las y los consumidores. Para reclamos <a href="">ingrese aquí</a></h5>
         <h6>Creado por <a target='black_' href="https://github.com/ronpanic">Martin Aguirre Dieguez</a></h6>
         <div className='footer-img'>

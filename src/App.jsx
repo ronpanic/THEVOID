@@ -12,8 +12,8 @@ function App() {
         <HomeTop className="hometop" />
         <div className='product-container'>
           <ItemListContainer/>
-          <Footer/>
         </div>
+        <Footer/>
       </div>
     </div>
   )
