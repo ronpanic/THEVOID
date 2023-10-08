@@ -3,6 +3,10 @@
     position: relative;
 }
 
+.homepage img {
+    object-fit: cover;
+}
+
 .background-img {
     width: 100%;
     height: 720px;
