@@ -1,0 +1,52 @@
+.homepage {
+    text-align: center;
+    position: relative;
+}
+
+.background-img {
+    width: 100%;
+    height: 720px;
+  }
+  
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    background-color: rgba(0, 0, 0, 0.2); 
+  }
+
+.homeinfo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.homeinfo h1 {
+    font-size: 8rem;
+    font-weight: 900;
+}
+
+.homeinfo h2 {
+    margin-bottom: -5rem;
+}
+
+.homeinfo h3 {
+    margin-top: -5rem;
+}
+
+.homeinfo button {
+    margin-top: 2rem;
+    background-color: #426ac0;
+    border: none;
+    width: 140px;
+    height: 3rem;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.homeinfo button:hover {
+    background-color: #3159ad;
+}

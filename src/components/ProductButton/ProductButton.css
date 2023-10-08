@@ -1,0 +1,11 @@
+.product-button {
+    margin-left: -6rem;
+    margin-top: -10px;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 12px;
+    padding: 0.2rem;
+    width: 6rem;
+    background-color: #e4e4e4;
+}
