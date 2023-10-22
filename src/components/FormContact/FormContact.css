@@ -10,6 +10,7 @@
     max-width: 100%;  
     width: 90%;
     height: 961px;
+    object-fit: cover;
 }
   
 .help-info h1 {
