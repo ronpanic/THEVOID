@@ -98,3 +98,14 @@ form h2 {
     margin-top: -2rem;
     margin-bottom: 4rem;
 }
+
+form h5 {
+    font-size: 15px;
+    margin-top: -4rem;
+    background-color: #3159ad;
+    color: #fff;
+    padding: 0 5px;
+    border-radius: 5px;
+    max-width: 19rem;
+    text-align: left;
+}

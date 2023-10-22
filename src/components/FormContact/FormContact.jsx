@@ -11,9 +11,9 @@ const FormContact = () => {
         event.preventDefault();
         
 
-        const serviceId = "service_prn6w77";
-        const templateId = "template_9o4vyca"
-        const apikey = "YjnxhHB9Ism-Cye4Y"
+       // const serviceId = "service_prn6w77";
+       // const templateId = "template_9o4vyca"
+       // const apikey = "YjnxhHB9Ism-Cye4Y" 
 
         emailjs.sendForm(serviceId, templateId, refForm.current, apikey)
         .then( result => console.log(result.text))
@@ -31,23 +31,24 @@ const FormContact = () => {
                 <form ref={refForm} onSubmit={handleSubmit}>
 
                     <h2>SE TE RESPONDERA A LA BREVEDAD...</h2>
+                    <h5>Email desactivado momentáneamente</h5>
     
                     <div className="input-group input-first">
-                        <fieldset><input type="text" id="nombre" name="username" placeholder="Nombre" required /></fieldset>
-                        <input type="text" id="apellido" name="apellido" placeholder="Apellido" required />
-                        <fieldset><input type="email" id="email" name="email" placeholder="Email" required /></fieldset>
+                        <fieldset><input type="text" id="nombre" name="username" placeholder="Nombre/s" required readOnly /></fieldset>
+                        <input type="text" id="apellido" name="apellido" placeholder="Apellido/s" required readOnly />
+                        <fieldset><input type="email" id="email" name="email" placeholder="Email" required readOnly /></fieldset>
                     </div>
 
                     <div className="input-group input-first">
-                        <input type="number" id="numero" name="numero" placeholder="Numero" />
-                        <input type="text" id="pais" name="pais" placeholder="Pais"  />
+                        <input type="number" id="numero" name="numero" placeholder="Numero" readOnly />
+                        <input type="text" id="pais" name="pais" placeholder="Pais" readOnly />
                     
                     </div>
                     
                     <div className="input-group">
-                        <fieldset><textarea id="mensaje" name="message" placeholder="Mensaje" required /></fieldset>
+                        <fieldset><textarea id="mensaje" name="message" placeholder="Mensaje" required  readOnly/></fieldset>
                     </div>
-                    <button type="submit">Enviar Email</button>
+                    <button readOnly type="submit">Enviar Email</button>
                 </form>
             </div>
         </div>

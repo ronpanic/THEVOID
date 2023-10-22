@@ -28,9 +28,13 @@
 
 .name-product {
     font-size: 3rem;
-    background-color: #006d6f;
+    color: #000;
+}
+
+.name1-product {
+    background-color: #3159ad;
     color: #fff;
-    border-radius: 24px;
-    width: 600px;
+    padding: 0 15px;
+    border-radius: 5px;
 }
 
