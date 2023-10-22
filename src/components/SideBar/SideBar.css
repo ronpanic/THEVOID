@@ -141,3 +141,8 @@
 .logout-icon:hover {
 	background-color: var(--dark);
 }
+
+.link-home {
+    text-decoration: none;
+    color: #454242;
+}

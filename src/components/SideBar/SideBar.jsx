@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import "./SideBar.css"
 
 const SideBar = () => {
-	const [isExpanded, setExpendState] = useState(false);
+	const [isExpanded, setExpandState] = useState(false);
 	const menuItems = [
 		{
 			text: "Cart",
@@ -11,16 +12,19 @@ const SideBar = () => {
 		{
 			text: "Brand",
 			icon: "image/earth.svg",
+			to: "/brand", 
 		},
 		{
 			text: "Help",
 			icon: "image/help.svg",
+			to: "/formcontact", 
 		},
 		{
 			text: "Settings",
 			icon: "image/settings.svg",
 		},
 	];
+
 	return (
 		<div
 			className={
@@ -31,14 +35,16 @@ const SideBar = () => {
 				<div className="nav-heading">
 					{isExpanded && (
 						<div className="nav-brand">
-							<h2>THE VOID CODER</h2>
+							<Link className='link-home' to="/"> {}
+								<h2>THE VOID CODER</h2>
+							</Link>
 						</div>
 					)}
 					<button
 						className={
 							isExpanded ? "hamburger hamburger-in" : "hamburger hamburger-out"
 						}
-						onClick={() => setExpendState(!isExpanded)}
+						onClick={() => setExpandState(!isExpanded)}
 					>
 						<span></span>
 						<span></span>
@@ -46,23 +52,20 @@ const SideBar = () => {
 					</button>
 				</div>
 				<div className="nav-menu">
-                {menuItems.map(({ text, icon }, index) => (
-                    <a
-                        key={index} 
-                        className={isExpanded ? "menu-item" : "menu-item menu-item-NX"}
-                        href="#"
-                    >
-                        <img className="menu-item-icon" src={icon} alt="" srcSet={""} />
-                        {isExpanded && <p>{text}</p>}
-                    </a>
-                ))}
-				
-				
-
+					{menuItems.map(({ text, icon, to }, index) => (
+						<Link
+							key={index}
+							className={isExpanded ? "menu-item" : "menu-item menu-item-NX"}
+							to={to}
+						>
+							<img className="menu-item-icon" src={icon} alt="" srcSet={""} />
+							{isExpanded && <p>{text}</p>}
+						</Link>
+					))}
 				</div>
 			</div>
 		</div>
 	);
 };
 
-export default SideBar
+export default SideBar;

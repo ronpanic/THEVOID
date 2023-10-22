@@ -1,0 +1,83 @@
+.brand-container {
+    text-align: center;
+    position: relative;
+}
+
+.background-img {
+    object-fit: cover;
+    width: 100%;
+}
+
+
+
+.brand-info {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+
+.brand-info h1 {
+    font-size: 8rem;
+    font-weight: 900;
+}
+
+.box-container {
+    margin-top: 2rem;
+    background-color: #fdfdfd;
+    width: 70%;
+    margin-left: 18rem;
+    border-radius: 5px;
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.tipografia {
+    padding: 3rem;
+}
+
+.tipografia h2, h3, p {
+    text-align: left;
+}
+
+.tipografia p {
+    max-width: 20rem;
+}
+
+.palet {
+    margin-left: 2rem;
+    padding: 2rem;
+    background-color: #fdfdfd;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+
+.palet h2, h3, p {
+    text-align: left;
+}
+
+.palet p {
+    max-width: 20rem;
+}
+
+
+.us {
+    margin-left: 2rem;
+    padding: 2rem;
+    background-color: #fdfdfd;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+
+.us h2, h3, p {
+    text-align: left;
+}
+
+.us p {
+    max-width: 20rem;
+}

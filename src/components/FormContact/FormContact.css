@@ -1,0 +1,99 @@
+.imgyform-container {
+    display: flex;
+}
+
+.form-container {
+    position: relative;
+}
+
+  .form-container img {
+    max-width: 100%;  
+    width: 90%;
+    height: 961px;
+}
+  
+.help-info h1 {
+    position: absolute;
+    font-size: 8rem;
+    font-weight: 900;
+    color: #dddddd;
+    top: 40%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+    max-width: 40rem;
+    text-shadow: 10px 10px 7px rgba(0, 0, 0, 0.36);
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    max-width: 600px;
+    margin-top: 15rem;
+    margin-left: -2rem;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    background-color: #fff;
+    border: 2px solid #cfcfcf;
+    border-radius: 5px;
+    width: 10rem;
+    height: 2rem;
+    padding-left: 1rem;
+    color: #000;
+}
+
+
+.input-group {
+    display: flex;
+    margin-bottom: 3rem;
+    color: #000;
+}
+
+
+
+.input-first input {
+    margin-right: 2rem;
+    color: #000;
+}
+
+
+
+textarea {
+    background-color: #fff;
+    border: 2px solid #cfcfcf;
+    width: 37rem;
+    height: 10rem;
+    padding-left: 1rem;
+    resize: none;
+    border-radius: 5px;
+    color: #000;
+}
+
+
+button {
+    width: 100%;
+    height: 2rem;
+    max-width: 150px; 
+    margin-left: -27.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #2436bf;
+    cursor: pointer;
+}
+
+button:active{
+    background-color: #2932 77;
+}
+
+form h2 {
+    margin-left: -1rem;
+    font-size: 2rem;
+    margin-top: -2rem;
+    margin-bottom: 4rem;
+}

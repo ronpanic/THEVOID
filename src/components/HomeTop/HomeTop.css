@@ -39,6 +39,7 @@
 
 .homeinfo h3 {
     margin-top: -5rem;
+    text-align: center;
 }
 
 .homeinfo button {
@@ -49,6 +50,7 @@
     height: 3rem;
     border-radius: 40px;
     cursor: pointer;
+    margin-left: 0.5px;
 }
 
 .homeinfo button:hover {
