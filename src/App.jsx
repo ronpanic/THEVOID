@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import AutomaticAfk from './components/AutomaticAfk/AutomaticAfk';
 import FormContact from './components/FormContact/FormContact';
+import DetailProduct from './components/DetailProduct/DetailProduct';
 
 const Home = () => {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/brand" element={<Brand />} />
             <Route path="/formcontact" element={<FormContact />} />
+            <Route path="/producto/:id" element={<DetailProduct />} />
           </Routes>
         </div>
       </div>

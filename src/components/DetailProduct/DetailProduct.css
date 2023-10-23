@@ -1,0 +1,21 @@
+.detail-container {
+    margin-left: 4rem;
+    display: flex;
+}
+
+.detail-container h2 {
+    font-size: 3rem;
+}
+
+.detail-container img {
+    margin-top: 3.5rem;
+    width: 767px;
+}
+
+.detailinfo-container {
+    margin-left: 2rem;
+}
+
+.detailinfo-container button {
+    margin-left: 0.1px;
+}
