@@ -1,21 +1,118 @@
 .detail-container {
-    margin-left: 4rem;
+    margin-left: -15rem;
     display: flex;
+    margin-bottom: 10rem;
+    position: relative;
 }
+
 
 .detail-container h2 {
     font-size: 3rem;
+    max-width: 40rem;
+}
+
+.detailinfo-container h6 {
+    max-width: 23rem;
+    margin-top: -2.5rem;
 }
 
 .detail-container img {
     margin-top: 3.5rem;
-    width: 767px;
+    width: 1000px;
 }
 
 .detailinfo-container {
-    margin-left: 2rem;
+    position: fixed;
+    left: 75%; 
+    transform: translateX(-50%); 
 }
 
-.detailinfo-container button {
-    margin-left: 0.1px;
+.detailinfo-container .size {
+    display: flex;
+}
+
+.size-container h3 {
+    font-size: 17px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.line {
+    border: 0.1px solid rgb(166, 166, 166, 0.2);
+    max-width: 27rem;
+}
+
+.detailinfo-container .size button {
+    background-color: transparent;
+    padding: 5px;
+    width: 3rem;
+    color: #838383;
+    border: 1.9px solid #838383;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+.detailinfo-container .size button:hover {
+    background-color: #838383;
+    color: #000;
+}
+
+.detailinfo-container .buy-button {
+    margin-top: 2rem;
+    width: 23.2rem;
+    height: 2rem;
+    background-color: #2436bf;
+    border: none;
+    cursor: pointer;
+}
+
+.detail-allcontainer {
+    margin-left: -20rem;
+}
+
+
+.counter {
+    text-align: center;
+    margin-top: 2rem;
+    border: 1.9px solid #838383;
+    color: #838383;
+    width: 6rem;
+    padding: 5px 20px;
+}
+
+.counter button {
+    background-color: transparent;
+    border: none;
+    color: #838383;
+}
+
+.counter span {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.size-guia {
+    margin-top: 2rem;
+}
+
+.size-guia h2 {
+    color: #ffa200;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.size-guia p {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: -10px;
+}
+
+.price-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-container p {
+    margin-right: 5px;
 }

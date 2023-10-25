@@ -1,5 +1,6 @@
 .cardProduct {
     cursor: pointer;
+    text-decoration: none;
 }
 
 .cardProduct img {
@@ -11,10 +12,10 @@
     font-size: 1rem;
     font-weight: 400;
     margin-top: 5px;
-    margin-left: 2px;
+    
 }
 
 .cardProduct p {
-    margin-top: -10px;
-    margin-left: 2px;
+    margin-top: -15px;
+    color: #6e6e6e;
 }
