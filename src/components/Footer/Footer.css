@@ -35,3 +35,15 @@
     border-radius: 5px;
     border: 1px #a6a6a6 solid;
 }
+
+@media (max-width: 500px) {
+    .footer-line {
+        width: 212%;
+    }
+
+    .footer h5 {
+        max-width: 30rem;
+    }
+
+  }
+  

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { voidProducts } from '../../asyncmock';
 import "./DetailProduct.css";
@@ -35,6 +36,7 @@ const DetailProduct = () => {
     
     <div>
         <div className='detail-allcontainer'>
+          <h1><Link to="/">THEVOID</Link></h1>
           <div className='detail-container'>
             <div className='additional-images'>
               {producto.imgAdditional.map((img, index) => (
@@ -48,10 +50,13 @@ const DetailProduct = () => {
             </div>
             <img src={imagenPrincipal} alt={producto.nombre} />
             <div className='detailinfo-container'>
+            <div className='links-container'>
+              <p>Inicio . {producto.nombre} . {producto.id} </p>
+            </div>
               <h2>{producto.nombre}</h2>
               <div className='price-container'>
                 <p>${producto.precio}</p>
-                <p>Price</p>
+                <p className='p-price'>Price</p>
               </div>
               <div className='line'></div>
               <div className='size-container'>
