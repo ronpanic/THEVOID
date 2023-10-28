@@ -2,6 +2,8 @@ import React from 'react';
 import "./Item.css";
 import { Link } from 'react-router-dom';
 
+
+
 const Item = ({ nombre, precio, img, id }) => {
   return (
     <Link to={`/producto/${id}`} className='cardProduct'>

@@ -153,6 +153,121 @@
 }
 
 
+@media (max-width: 1500px) {
+
+
+    .detailinfo-container {
+        position: relative;
+        left: 18%; 
+        margin-top: 2.5rem;
+        transform: translateX(-50%); 
+        width: 30%;
+    }
+
+    .detail-container {
+        margin-left: 17rem;
+        margin-bottom: 36rem;
+    }
+
+    .detail-container img {
+        width: 700px;
+        height: 1018px;
+    }
+
+    .additional-images img {
+        width: 170px;
+        height: 242px;
+        
+    }
+  }
+
+  @media (max-width: 1200px) {
+
+    .additional-images {
+        display: none;
+    }
+
+    .detail-allcontainer  h1 {
+        display: block;
+        text-align: center;
+        margin-left: 20rem;
+    }
+
+    .detail-allcontainer h1 a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .detailinfo-container {
+        position: relative;
+        left: 22%; 
+        margin-top: 2.5rem;
+        transform: translateX(-50%); 
+        width: 40%;
+    }
+
+    .detail-container {
+        margin-left: 18rem;
+        margin-bottom: 10rem;
+    }
+
+    .detail-container img {
+        width: 600px;
+        height: 1018px;
+    }
+
+    .additional-images img {
+        width: 170px;
+        height: 242px;
+    }
+
+    .detailinfo-container .buy-button {
+        width: 20rem;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .detail-container {
+        margin-bottom: 10rem;
+        margin-left: 21rem;
+    }
+
+    .detailinfo-container .buy-button {
+        width: 18rem;
+    }
+
+  }
+
+  @media (max-width: 1000px) {
+
+
+    .detail-container {
+        display: block;
+        margin-left: 26rem;
+        margin-bottom: 8rem;
+    }
+
+    .detailinfo-container {
+        position: relative;
+        left: 40%; 
+        margin-top: 2.5rem;
+        transform: translateX(-50%); 
+        width: 80%;
+    }
+
+  }
+
+  @media (max-width: 800px) {
+    .detail-container {
+        margin-left: 23.5rem;
+    }
+
+  }
+
+
+  
+
+
 @media (max-width: 500px) {
 
     .detail-container {
@@ -162,7 +277,8 @@
     }
 
     .detail-container img {
-        width: 500px;
+        width: 495px;
+        height: auto;
         margin-left: 20rem;
     }
 
@@ -219,4 +335,3 @@
     }
 
   }
-  

@@ -2,13 +2,17 @@ import Item from '../Item/Item'
 import "./ItemList.css"
 
 
-const ItemList = ({ product }) => {
+const ItemList = ({ product, selectedCategory }) => {
+  const filteredProducts = selectedCategory
+      ? product.filter(item => item.categoria === selectedCategory)
+      : product;
+
+
   return (
-    <div className='product-container1'>
-      {product.map(item => <Item key={item.nombre} {...item} />)}
-    </div>
+      <div className='product-container1'>
+          {filteredProducts.map(item => <Item key={item.nombre} {...item} />)}
+      </div>
   )
 }
 
-
-export default ItemList
+export default ItemList;

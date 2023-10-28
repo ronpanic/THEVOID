@@ -2,10 +2,6 @@
     display: flex;
 }
 
-.sidebar {
-    
-}
-
 .content-container {
     flex: 1;
     display: flex;
@@ -26,15 +22,7 @@
     gap: 2rem;
 }
 
-.name-product {
-    font-size: 3rem;
-    color: #000;
-}
 
-.name1-product {
-    background-color: #3159ad;
-    color: #fff;
-    padding: 0 15px;
-    
-}
+
+
 

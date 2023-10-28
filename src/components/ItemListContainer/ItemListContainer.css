@@ -1,0 +1,39 @@
+.name-product {
+    font-size: 3rem;
+    color: #000;
+}
+
+.name1-product {
+    background-color: #3159ad;
+    color: #fff;
+    padding: 0 15px;
+}
+
+.category-container {
+    display: flex;
+    margin-top: -2rem;
+    gap: 4rem;
+}
+
+.category-container h2 {
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.category-container h2:hover {
+    text-decoration: underline;
+}
+
+.loader {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 500px) {
+
+    .category-container {
+        gap: 1.4rem;
+    }
+
+}
