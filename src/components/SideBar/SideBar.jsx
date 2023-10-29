@@ -8,6 +8,7 @@ const SideBar = () => {
 		{
 			text: "Cart",
 			icon: "image/cart.svg",
+			to: "/cart"
 		},
 		{
 			text: "Brand",

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './App.css'
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import SideBar from './components/SideBar/SideBar';
@@ -9,6 +9,12 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import AutomaticAfk from './components/AutomaticAfk/AutomaticAfk';
 import FormContact from './components/FormContact/FormContact';
 import DetailProduct from './components/DetailProduct/DetailProduct';
+import CarritoContext, { CarritoProvider } from './components/Context/CartContext';
+import CartDetails from './components/CartDetails/CartDetails';
+
+
+
+
 
 const Home = () => {
   return (
@@ -22,19 +28,24 @@ const Home = () => {
 }
 
 function App() {
+  const { carrito, total, cantidadTotal } = useContext(CarritoContext);
+  
   return (
     <BrowserRouter>
-      <div className="app-container">
-        <SideBar />
-        <div className="content-container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/brand" element={<Brand />} />
-            <Route path="/formcontact" element={<FormContact />} />
-            <Route path="/producto/:id" element={<DetailProduct />} />
-          </Routes>
+      <CarritoProvider>
+        <div className="app-container">
+          <SideBar />
+          <div className="content-container">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/brand" element={<Brand />} />
+              <Route path="/formcontact" element={<FormContact />} />
+              <Route path="/producto/:id" element={<DetailProduct />} />
+              <Route path="/cart" element={<CartDetails />} />
+            </Routes>
+          </div>
         </div>
-      </div>
+      </CarritoProvider>
     </BrowserRouter>
   )
 }
