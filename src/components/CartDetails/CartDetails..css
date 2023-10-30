@@ -50,7 +50,7 @@
 }
 
 .cartleft-container {
-  margin-left: 4rem;
+  margin-left: -45rem;
 }
 
 .cart-container li {
@@ -215,4 +215,13 @@
   font-weight: 600;
   font-size: 5rem;
 
+}
+
+
+.cartfooter{
+   margin-top: 47.1rem;
+}
+
+.cartfooter h5 {
+  margin-left: -35rem;
 }
