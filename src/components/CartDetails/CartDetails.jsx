@@ -126,6 +126,7 @@ const CartDetails = () => {
           <h5>Copyright THEVOID - 2023. Todos los derechos reservados. Defensa de las y los consumidores. Para reclamos <a href="">ingrese aquí</a></h5>
       </div>
     </div>
+
   );
 }
 
