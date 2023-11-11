@@ -1,7 +1,7 @@
-import React, { useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
-import { voidProducts } from '../../asyncmock';
+import React, { useState, useContext, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { doc, getDoc } from "firebase/firestore";
+import { db } from '../../services/config.js';
 import "./DetailProduct.css";
 import Footer from '../Footer/Footer';
 import { CarritoContext } from "../Context/CartContext.jsx";
@@ -9,10 +9,31 @@ import { CarritoContext } from "../Context/CartContext.jsx";
 const DetailProduct = () => {
   const { agregarAlCarrito } = useContext(CarritoContext);
 
-  let { id } = useParams();
-  const producto = voidProducts.find(item => item.id === parseInt(id, 10));
+  const { id } = useParams();
+  const [producto, setProducto] = useState(null);
   const [contador, setContador] = useState(1);
-  const [imagenPrincipal, setImagenPrincipal] = useState(producto.img);
+  const [imagenPrincipal, setImagenPrincipal] = useState(null);
+  const [tallaSeleccionada, setTallaSeleccionada] = useState('S');
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const productRef = doc(db, 'inventario', id);
+        const productSnap = await getDoc(productRef);
+        if (productSnap.exists()) {
+          const productData = productSnap.data();
+          setProducto(productData);
+          setImagenPrincipal(productData.data.img);
+        } else {
+          console.log('¡Documento no encontrado!');
+        }
+      } catch (error) {
+        console.error('Error al obtener el producto:', error);
+      }
+    };
+
+    fetchProduct();
+  }, [id]);
 
   const restarProducto = () => {
     if (contador > 1) {
@@ -30,17 +51,13 @@ const DetailProduct = () => {
     setImagenPrincipal(nuevaImagen);
   }
 
-  if (!producto) {
-    return <div>Producto no encontrado</div>;
-  }
-
-  const [tallaSeleccionada, setTallaSeleccionada] = useState('S');
-
   const handleClickComprar = () => {
     agregarAlCarrito(producto, contador, tallaSeleccionada);
   };
 
-
+  if (!producto) {
+    return <div>Producto no encontrado</div>;
+  }
 
   return (
     <div>
@@ -48,16 +65,12 @@ const DetailProduct = () => {
         <h1><Link to="/">THEVOID</Link></h1>
         <div className='detail-container'>
           <div className='additional-images'>
-            {producto.imgAdditional.map((img, index) => (
-              <img
-                key={index}
-                src={img}
-                alt={`Additional Image ${index + 1}`}
-                onClick={() => cambiarImagenPrincipal(img)}
-              />
-            ))}
+            <img src={producto.imgad} alt={producto.nombre} />
+            <img src={producto.imgad2} alt={producto.nombre} />
+            <img src={producto.imgad3} alt={producto.nombre} />
+            <img src={producto.imgad4} alt={producto.nombre} />
           </div>
-          <img src={imagenPrincipal} alt={producto.nombre} />
+          <img src={producto.img} alt={producto.nombre} />
           <div className='detailinfo-container'>
             <div className='links-container'>
               <p>Inicio . {producto.nombre} . {producto.id} </p>
@@ -67,6 +80,7 @@ const DetailProduct = () => {
               <p>${producto.precio}</p>
               <p className='p-price'>Price</p>
             </div>
+            <p>Stock: {producto.stock}</p>
             <div className='line'></div>
             <div className='size-container'>
               <h3>Size:</h3>
@@ -102,17 +116,17 @@ const DetailProduct = () => {
                   XXL
                 </button>
               </div>
-          </div>
+            </div>
 
             <div className='counter'>
               <button onClick={restarProducto}>-</button>
               <span>{contador}</span>
               <button onClick={sumarProducto}>+</button>
             </div>
-            <button className='buy-button' onClick={handleClickComprar}>Comprar</button>
+            <button className='buy-button' onClick={handleClickComprar}>Añadir al carrito</button>
             <div className='size-guia'>
               <h2>Guía de talles:</h2>
-              <p>Podras encontrar la guía de talles en la última foto</p>
+              <p>PODRAS ENCONTRAR LA GUIA DE TALLES EN LA ULTIMA FOTO.</p>
             </div>
             <h6>
               {producto.info.split('.').map((sentence, index) => (
