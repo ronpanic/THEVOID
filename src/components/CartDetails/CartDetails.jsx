@@ -14,21 +14,29 @@ const CartDetails = () => {
 
   const handleVaciarCarrito = () => {
     vaciarCarrito();
-    actualizarTotales();
   };
 
   const handleCheckout = () => {
-    setCheckoutClicked(true);
+    if (carrito.length === 0) {
+      alert('No hay productos en el carrito. Agrega productos antes de realizar el pago.');
+    } else {
+      setCheckoutClicked(true);
+    }
   };
-
+  
   const handleAceptar = () => {
     setCompraRealizada(true);
     setCheckoutClicked(false);
-
+    
+    
     setTimeout(() => {
       setCompraRealizada(false);
-    }, 5000); 
+      handleVaciarCarrito();
+    }, 5000);
+    
   };
+
+  
 
   return (
     <div>

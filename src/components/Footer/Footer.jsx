@@ -7,7 +7,7 @@ const Footer = () => {
     <div className='footer'>
       <div className="footer-line"></div>
         <h5>Copyright THEVOID - 2023. Todos los derechos reservados. Defensa de las y los consumidores. Para reclamos <a href="">ingrese aquí</a></h5>
-        <h6>Creado por <a target='black_' href="#">Martin Aguirre Dieguez</a></h6>
+        <h6>Creado por <a target='_blank' href="#">Martin Aguirre Dieguez</a></h6>
         <div className='footer-img'>
             <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" alt="" />
             <img src="https://d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" alt="" />
